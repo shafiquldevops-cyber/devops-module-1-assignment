@@ -28,7 +28,7 @@ It includes theoretical answers, scenario-based solutions, a local demo web appl
 │   ├── 03-ngrok-public-access.png
 │   └── 04-github-repository.png
 └── .gitignore
-
+.
 ## Part A: Theoretical Questions
 
 1. What is DevOps Engineering? How does it differ from traditional development and operations roles?
