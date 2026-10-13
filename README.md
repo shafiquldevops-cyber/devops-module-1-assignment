@@ -29,7 +29,7 @@ It includes theoretical answers, scenario-based solutions, a local demo web appl
 │   └── 04-github-repository.png
 └── .gitignore
 
-Part A: Theoretical Questions
+## Part A: Theoretical Questions
 
 1. What is DevOps Engineering? How does it differ from traditional development and operations roles?
 
@@ -117,105 +117,80 @@ After collecting sufficient information, the engineer can identify the likely ca
 
 This method helps reduce downtime, avoids unnecessary changes, and provides useful information for preventing similar incidents in the future.
 
-Part B: Scenario-Based Questions
+## Part B: Scenario-Based Questions
 
 1. A new student is unfamiliar with GitHub and cloud platforms. How would you onboard the student efficiently?
 
-I would introduce the student to the required tools gradually, combining basic explanations with practical exercises.
+I would follow a structured onboarding process.
 
-Step 1: Explain the Learning Objectives
+1. Introduction: Explain the course objectives, required tools, and expected outcomes.
+2. Tool Setup: Help the student create a GitHub account and install Git.
+3. Basic Training: Introduce repositories, commits, branches, pull requests, and README files.
+4. Cloud Fundamentals: Explain basic cloud concepts such as virtual machines, storage, networking, and identity management.
+5. Documentation: Share official documentation, setup instructions, and example projects.
+6. Communication: Introduce the team’s communication channels and explain where to ask technical questions.
+7. Hands-on Practice: Ask the student to create a small repository, commit a file, and document the work.
+8. Feedback: Review progress and provide additional support where necessary.
 
-Start by describing the purpose of the training, the tools involved, and the skills the student is expected to develop.
-
-Step 2: Prepare the Development Environment
-
-Help the student create a GitHub account, install Git, and configure the necessary software.
-
-Step 3: Introduce GitHub Fundamentals
-
-Demonstrate how repositories, commits, branches, pull requests, and README files are used in collaborative projects.
-
-Step 4: Cover Basic Cloud Concepts
-
-Explain the role of virtual machines, cloud storage, networking, and identity management. Use simple examples to show how these services work.
-
-Step 5: Provide Learning Resources
-
-Share official documentation, setup guides, and beginner-friendly project examples so the student can continue learning independently.
-
-Step 6: Explain Team Communication
-
-Show the student how to communicate with team members, report technical difficulties, and find answers to common questions.
-
-Step 7: Assign a Practical Exercise
-
-Ask the student to create a repository, add a sample file, commit a change, and write a short project description.
-
-Step 8: Review Progress
-
-Check the student’s work, identify areas that need improvement, and provide additional guidance.
-
-This process helps beginners become familiar with the tools while building confidence through hands-on practice.
+This approach helps the student learn the required tools through practical experience.
 
 2. An application goes down unexpectedly during a production deployment. How would you troubleshoot it?
 
-I would approach the incident systematically, focusing first on restoring the service and then identifying the underlying cause.
+I would follow these steps:
 
-Step 1: Determine the Scope of the Problem
+Step 1: Assess the Impact
 
-Check whether the application is completely unavailable or whether only certain features or users are affected.
+Confirm the outage, identify affected services, and determine how many users are impacted.
 
-Step 2: Inform the Relevant People
+Step 2: Communicate
 
-Notify the responsible technical team and other stakeholders through the established incident communication channel.
+Notify the relevant team members and stakeholders through the incident communication channel.
 
-Step 3: Examine Logs and Monitoring Data
+Step 3: Check Monitoring and Logs
 
-Review application errors, server logs, CPU and memory consumption, network status, and monitoring alerts to identify unusual behaviour.
+Review application logs, system logs, CPU and memory usage, network connectivity, and monitoring alerts.
 
-Step 4: Review Recent Changes
+Step 4: Identify Recent Changes
 
-Investigate whether the latest release introduced a code defect, configuration problem, dependency conflict, or infrastructure issue.
+Check the latest deployment, configuration updates, dependency changes, and infrastructure modifications.
 
-Step 5: Recover the Application
+Step 5: Restore Service
 
-If the new deployment is identified as the likely cause, consider rolling back to the previous stable version, provided the rollback procedure is safe and appropriate.
+If the new release is responsible and rollback is safe, restore the last known working version using the established rollback procedure.
 
-Step 6: Confirm That the Service Is Working
+Step 6: Verify Recovery
 
-Test the application, check its health status, and verify that users can access the expected functionality.
+Test the application, check its health endpoints, and confirm that users can access it successfully.
 
-Step 7: Investigate the Root Cause
+Step 7: Conduct Root Cause Analysis
 
-Once the service has recovered, document the incident, determine why it happened, and identify changes that could prevent a recurrence.
+After recovery, investigate the underlying cause and document corrective and preventive actions.
 
-The main objective is to minimize service disruption while ensuring that recovery actions are safe and properly communicated.
+The priority is to restore service safely, communicate clearly, and prevent recurrence.
 
 3. How can DevOps balance frequent releases with system stability?
 
-DevOps can support frequent software releases without compromising stability by combining automation, testing, controlled deployments, and continuous monitoring.
+DevOps practices can improve both release speed and reliability.
 
-The following practices are particularly useful:
+* CI/CD Pipelines: Automate builds, tests, and deployments.
+* Automated Testing: Detect defects before production deployment.
+* Code Reviews: Improve code quality and reduce avoidable mistakes.
+* Staging Environments: Test changes in an environment similar to production.
+* Monitoring and Alerting: Detect failures and performance degradation quickly.
+* Gradual Releases: Use canary deployments or blue-green deployments where appropriate.
+* Rollback Procedures: Restore a previous stable version when a release fails.
+* Post-Incident Reviews: Identify weaknesses and improve future releases.
 
-* CI/CD Automation: Automates repetitive build, testing, and deployment activities.
-* Automated Testing: Identifies software defects before they affect production users.
-* Code Review: Allows team members to examine changes and identify potential problems before merging them.
-* Staging Environment: Provides a separate environment for validating releases before production deployment.
-* Continuous Monitoring: Helps engineers detect errors, performance issues, and service interruptions.
-* Controlled Deployment: Techniques such as canary and blue-green deployments reduce the risk associated with releasing changes to all users at once.
-* Rollback Planning: Makes it possible to return to a stable version when a new release causes problems.
-* Post-Incident Analysis: Helps teams learn from failures and improve their development and deployment processes.
-
-When these practices are implemented properly, organizations can release improvements more frequently while maintaining dependable services.
+These practices help teams release features frequently without sacrificing reliability.
 
 4. How can proper onboarding to communication platforms improve distributed DevOps workflows?
 
-Distributed DevOps teams often work from different locations and time zones. A clear communication process helps them coordinate tasks, exchange technical information, and respond to incidents without unnecessary delays.
+Distributed teams need clear and consistent communication.
 
-During onboarding, new team members should learn which platforms are used for different activities. For example, Slack or Microsoft Teams may be used for discussions, Jira for tracking tasks, GitHub for code collaboration, and a shared documentation system for recording technical procedures.
+During onboarding, team members should learn which platforms are used for daily communication, technical discussions, incident alerts, documentation, and task tracking.
 
-The team should also establish clear guidelines for reporting incidents, assigning responsibilities, escalating urgent issues, and sharing progress updates.
+For example, a team may use Slack or Microsoft Teams for communication, Jira for task tracking, GitHub for code collaboration, and a shared documentation platform for operational procedures.
 
-For instance, if a production server becomes unavailable, the responsible engineer should know where to report the incident, whom to notify, and where to document troubleshooting results.
+The team should also define incident severity levels, escalation procedures, and responsibilities.
 
-A well-organized communication process reduces misunderstandings, improves coordination, and helps distributed teams resolve technical issues more efficiently.
+This reduces confusion, speeds up incident response, and ensures that everyone can access the information needed to perform their tasks.
