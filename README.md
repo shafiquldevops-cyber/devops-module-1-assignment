@@ -185,9 +185,6 @@ Real-World Use Case:
 
 ngrok can help developers share a locally running application with teammates or clients for testing and feedback without deploying it to a public production server.
 
-Security Consideration:
-
-A public tunnel exposes a local service to external requests. Sensitive applications should not be exposed without appropriate authentication and access controls. Stop the tunnel when it is no longer needed.
 
 Conclusion
 
